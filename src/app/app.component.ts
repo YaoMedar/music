@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sika';
+  title = 'Welcome to sîka social network';
+  info = 'About to sika society';
 }
