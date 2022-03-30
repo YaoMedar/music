@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  background-color: rgb(8, 159, 247);}
+
+.footer{
+   
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right,#0428f5,#15b607);
+    color: aliceblue;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    
+    /* border-bottom-right-radius: 125px; */
+    /* font-size: 14px;
+    line-height: 20px;
+}
+ .row{
+     width: 100%;
+     margin: auto;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: flex-start;
+     justify-content: space-between;
+ }
+ .col{
+     flex-basis: 25%;
+     padding: 10px;
+ }
+
+.logo{
+    width: 80px;
+    
+}
+
+.col h3{
+    width: fit-content;
+    position: relative;
+}
+ 
+
+ .email-id{
+     width: fit-content;
+     border-bottom: 1px solid #ccc;
+     margin: 20px 0;
+    
+ }
+
+ 
+
+ 
+
+ .col li{
+    width: fit-content;
+   text-decoration: none;
+}
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */ 

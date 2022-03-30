@@ -1,19 +1,45 @@
 import { HttpClient } from "@angular/common/http";
-import { inject } from "@angular/core/testing";
-import { AppConfigModule } from "../app-config/app-config.module";
+import { Inject, Injectable } from "@angular/core";
+import {map} from 'rxjs/operators';
 import { Music } from "../model/music";
 
+import { AppConfig, APP_CONFIG } from "../app-config/app-config.module";
+
+
+@Injectable()
+
 export class ItuneService {
-    public query!: String;
-    constructor(private http: HttpClient, @inject(APP_CONFIG) private config: AppConfig){
+   
+    public query: String;
+    public music: Music[] = [];
+
+    constructor(private http: HttpClient, @Inject(APP_CONFIG) private config: AppConfig){
+        this.query = config.apiEndPoint;
+    }
+
+
+    public searchMusic(queryTitle: String){
+
+        this.query = queryTitle;
+
+        this.http.get(`${this.config.apiEndPoint}search?term=${this.query}`).pipe(
+           
+            map(data =>{
+                const res: any =data;
+                //console.log(res.results);
+                return res.results ? res.results : [];
+            })
+
+        ).subscribe((music) => this.music = music);
         
     }
 
-    public search(queryTitle: String){
-        this.query = queryTitle;
-        this.http.get('${this.config.apiEndPoint}')
-        
+
+    public moreInfo(musicId: String){
+        return this.http.get(`${this.config.apiEndPoint}lookup/?id=${musicId}`);
+
     }
+
 
     public bookFactory (item: any): Music{
         return new Music (
@@ -25,4 +51,10 @@ export class ItuneService {
             item.trackId
         )
     }
+
+     
+}
+
+function next(next: any, arg1: (music: any) => Music[]) {
+    throw new Error("Function not implemented.");
 }

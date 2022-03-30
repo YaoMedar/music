@@ -11,6 +11,12 @@ import { LibraryComponent } from './library/library.component';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule} from '@angular/common/http';
 import { AppConfigModule } from './app-config/app-config.module';
+import { ItuneService } from './service/itune-service';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,7 @@ import { AppConfigModule } from './app-config/app-config.module';
     MusicListComponent,
     LibraryComponent,
     SearchComponent,
-    
+
   ],
   
   imports: [
@@ -28,9 +34,18 @@ import { AppConfigModule } from './app-config/app-config.module';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    AppConfigModule
+    AppConfigModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule
   ],
-  providers: [],
+
+  providers: [
+    ItuneService
+  ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

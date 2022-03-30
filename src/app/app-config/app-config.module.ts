@@ -5,25 +5,32 @@ import { environment } from "src/environments/environment";
 
 export let APP_CONFIG = new InjectionToken<AppConfig>('app.config');
 
-class  AppConfig {
-     apiEndPoint: String | undefined;
+export class  AppConfig {
+    apiEndPoint!: String;
 }
+
 
 export const APP_DI_CONFIG: AppConfig = {
     apiEndPoint: environment.apiEndpoint
-}
+} 
+
+
 @NgModule({
-    declarations: [],
+
+    declarations: [
+
+    ],
+
 
     imports: [
         CommonModule
     ],
 
+
     providers: [{
-        provide:APP_CONFIG,
+        provide: APP_CONFIG,
         useValue: APP_DI_CONFIG
     }]
 })
-export class AppConfigModule{
 
-}
+export class AppConfigModule{}

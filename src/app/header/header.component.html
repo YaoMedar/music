@@ -1,19 +1,41 @@
 
-<div class="toolbar" role="banner">
-    <img
-      width="40"
-      alt="sika"
-      src="assets/img/logosîka.jpg"
-    />
-    <span>Sîka</span>
 
-    <div class="spacer">
-      <a class="nav-link"  [routerLink]="['search']">Home<span class="sr-only"></span></a>
-    </div>
+<div class="toolbar" role="banner" >
   
-    <div class="spacer">
-      <a class="nav-link" [routerLink]="['library']">Library</a> 
-    </div>
-             
+  
+  <mat-toolbar color="primary">
+    <mat-toolbar-row fxLayoutAlign="space-between center">
+      <div fxLayout="row">
+        <button mat-button>
+          <img
+          width="30"
+          alt="sika"
+          src="assets/img/logo-quit1.png"
+        />
+          <span>QUITTANCE</span>
+        </button>
+        <div *ngIf="!deviceXs">
+          <button mat-button> <a class="nav-link"  [routerLink]="['search']">Music<span class="sr-only"></span></a></button>
+          <button mat-button><a class="nav-link" [routerLink]="['library']">Library</a> 
+          </button>
+            
+        </div>
+      </div>
+      <div>
+        <mat-icon *ngIf="deviceXs">more_vert</mat-icon>
+        <span *ngIf="!deviceXs">Menu</span>
+      </div>
+    </mat-toolbar-row>  
+    
+    <mat-toolbar-row *ngIf="deviceXs" fxLayoutAllgn="space-between end">
+      <button mat-button>Contact</button>
+          <button mat-button>About</button>
+          <button mat-button>help</button>
+    </mat-toolbar-row>
+    
+  </mat-toolbar>
+  
+  
+    
 </div>  
 
