@@ -10,15 +10,16 @@ import { ItuneService } from '../service/itune-service';
   styleUrls: ['./music.component.css']
 })
 export class MusicComponent implements OnInit {
+  music: any;
   
-   music!: Music;
+  
 
   constructor(private router:Router,private route: ActivatedRoute, public itunesmusicservice: ItuneService) { 
-
+    
     this.route.params.subscribe((params => {
 
       if(params['musicId']){
-        //console.log(params['musicId']);
+        
         this.getMusic(params['musicId']);
        
       }
@@ -34,7 +35,7 @@ export class MusicComponent implements OnInit {
         return res.results ? res.results : [];
 
       })
-    ).subscribe((music) => 'this.music = music');
+    ).subscribe((music) => this.music = music);
   }
   
   ngOnInit(): void {

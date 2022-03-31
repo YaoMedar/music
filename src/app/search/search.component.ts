@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit {
   }
 
   onsubmit(form: NgForm){
-    this.ituneservice.searchMusic(form.value.search)
+    this.ituneservice.searchMusic(form.value.search);
    
   }
 

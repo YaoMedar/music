@@ -3,22 +3,20 @@
 <div class="toolbar" role="banner" >
   
   
-  <mat-toolbar color="primary">
+  <mat-toolbar>
     <mat-toolbar-row fxLayoutAlign="space-between center">
       <div fxLayout="row">
         <button mat-button>
           <img
           width="30"
           alt="sika"
-          src="assets/img/logo-quit1.png"
-        />
-          <span>QUITTANCE</span>
+          src="assets/img/logosîka.jpg"
+        /> 
         </button>
         <div *ngIf="!deviceXs">
           <button mat-button> <a class="nav-link"  [routerLink]="['search']">Music<span class="sr-only"></span></a></button>
           <button mat-button><a class="nav-link" [routerLink]="['library']">Library</a> 
           </button>
-            
         </div>
       </div>
       <div>

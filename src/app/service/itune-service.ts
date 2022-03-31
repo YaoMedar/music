@@ -26,7 +26,7 @@ export class ItuneService {
            
             map(data =>{
                 const res: any =data;
-                //console.log(res.results);
+                
                 return res.results ? res.results : [];
             })
 
@@ -55,6 +55,6 @@ export class ItuneService {
      
 }
 
-function next(next: any, arg1: (music: any) => Music[]) {
+function next(_next: any, arg1: (music: any) => Music[]) {
     throw new Error("Function not implemented.");
 }
