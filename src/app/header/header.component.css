@@ -10,13 +10,12 @@
     color: white;
     font-weight: 600;
   }
-  
+
   .toolbar img {
     margin: 0 32px;
   }
 
   .nav-link{
-    color: white;
+    color: rgb(44, 7, 78);
   }
-  
-  
+

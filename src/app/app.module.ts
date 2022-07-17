@@ -17,6 +17,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { SchoolComponent } from './school/school.component';
+import { NavComponent } from './nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { HomeComponent } from './home/home.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -26,9 +35,12 @@ import {MatIconModule} from '@angular/material/icon';
     MusicListComponent,
     LibraryComponent,
     SearchComponent,
+    SchoolComponent,
+    NavComponent,
+    HomeComponent,
 
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,13 +51,19 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule
   ],
 
   providers: [
     ItuneService
   ],
-  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

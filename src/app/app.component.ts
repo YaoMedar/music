@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MediaObserver,MediaChange } from '@angular/flex-layout'; 
+import { MediaObserver,MediaChange } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
 
 
@@ -13,8 +13,7 @@ import { Subscription } from 'rxjs';
 
 
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'Welcome to sîka social network';
-  info = 'About to sika society';
+  title = 'Welcome to Yodam platform';
   mediaSub: Subscription = new Subscription;
   deviceXs: boolean = false;
 
@@ -25,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
       console.log(result.mqAlias);
       this.deviceXs = result.mqAlias === 'xs' ? true : false;
     });
-    
+
   }
 
   ngOnDestroy(): void {
