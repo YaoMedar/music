@@ -7,5 +7,5 @@ export class Music{
         public artworkUrl100: String,
         public trackId: Number
         ) { }
-    
+
 }

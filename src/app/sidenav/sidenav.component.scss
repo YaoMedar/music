@@ -1,0 +1,37 @@
+.nav-service{
+  background-color: #190025;
+  border:dashed 3px #c35d04;
+}
+  .logo-img{
+    width: 64px;
+    margin-left: 40px;
+  }
+
+.mat-2{
+  background-color: #008009;
+  color: #ffffff;
+  font-weight: 500;
+}
+  .mat-list-item{
+    color: #195721;
+    border-radius: 5px;
+    margin-top: 10px;
+  }.mat-list-item:hover{
+    border-radius: 5px;
+    color: #190025;
+
+  }
+  .mat-list-item:hover{
+    background-color:aliceblue;
+  }
+.list-item-active{
+  color: #c35d04;
+}
+.jeux
+{
+  display: flex;
+  justify-content: center;
+  color: #190025;
+  font-weight: bold;
+  margin-top: 1rem;
+}

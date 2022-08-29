@@ -1,21 +1,24 @@
-.toolbar {
-    position: absolute;
+mat-toolbar {
+    position:sticky;
     top: 10;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
+   z-index:100;
   }
 
-  .toolbar img {
-    margin: 0 32px;
+ul li{
+   list-style: none;
   }
-
-  .nav-link{
-    color: rgb(44, 7, 78);
+.user{
+    font-size: 13px;
   }
-
+.user-image{
+  border-radius: 50%;
+  width: 64px;
+  width: 64;
+}
+.user-image-icon{
+  font-size: 16px;
+}
+::ng-deep mat-menu-content
+{
+  width: 160px;
+}

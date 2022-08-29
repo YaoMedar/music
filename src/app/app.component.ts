@@ -1,7 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MediaObserver,MediaChange } from '@angular/flex-layout';
-import { Subscription } from 'rxjs';
-
+import { Component} from '@angular/core';
 
 
 
@@ -12,22 +9,16 @@ import { Subscription } from 'rxjs';
 })
 
 
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent  {
   title = 'Welcome to Yodam platform';
-  mediaSub: Subscription = new Subscription;
-  deviceXs: boolean = false;
+  sideBarOpen = true;
 
-  constructor(public mediaObserver:MediaObserver){}
+  // constructor(public mediaObserver:MediaObserver){}
 
-  ngOnInit(): void {
-    this.mediaSub = this.mediaObserver.media$.subscribe((result:MediaChange)=>{
-      console.log(result.mqAlias);
-      this.deviceXs = result.mqAlias === 'xs' ? true : false;
-    });
 
+
+  sideBarToggler(){
+    this.sideBarOpen = !this.sideBarOpen;
   }
 
-  ngOnDestroy(): void {
-    this.mediaSub.unsubscribe();
-  }
 }

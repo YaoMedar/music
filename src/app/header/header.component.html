@@ -1,39 +1,22 @@
-<!--
-
-<div class="toolbar" role="banner" >
-
-
-  <mat-toolbar>
-    <mat-toolbar-row fxLayoutAlign="space-between center">
-      <div fxLayout="row">
-        <button mat-button>
-          <img
-          width="30"
-          alt="sika"
-          src="assets/yodam.png"
-        />
-        </button>
-        <div *ngIf="!deviceXs">
-          <button mat-button> <a class="nav-link"  [routerLink]="['search']">Music<span class="sr-only"></span></a></button>
-          <button mat-button><a class="nav-link" [routerLink]="['school']">School</a>
+<mat-toolbar>
+  <mat-toolbar-row class="justify-content-between">
+    <button mat-icon-button (click)="toggleSidebar()"><mat-icon >menu</mat-icon></button>
+    <div class="row mr-2 ml-auto">
+      <ul>
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
+            <img src="../../assets/avatar.png" class="user-image mr-1 p-2"  style="width:64px" alt="" />
+            Yodam
+            <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
           </button>
-        </div>
-      </div>
-      <div>
-        <mat-icon *ngIf="deviceXs">more_vert</mat-icon>
-        <span *ngIf="!deviceXs">Menu</span>
-      </div>
-    </mat-toolbar-row>
-
-    <mat-toolbar-row *ngIf="deviceXs" fxLayoutAllgn="space-between end">
-      <button mat-button>Contact</button>
-          <button mat-button>About</button>
-          <button mat-button>help</button>
-    </mat-toolbar-row>
-
-  </mat-toolbar>
-
-
-
-</div>
- -->
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>exit_to_app</mat-icon>
+              Logout
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

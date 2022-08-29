@@ -1,14 +1,8 @@
-<div class="grid-container">
-  <h1 class="mat-h1">Today deals</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{card.title}}
-          </mat-card-title>
-        </mat-card-header>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+<div class="container-fluid page">
+  <div class="page_box p-3 mt-2">Home</div>
+ <div class="page_content shadow p-3 position-relative">
+  <div class="page_content-data position-absolute text-center">
+    Home content goes here
+  </div>
+ </div>
 </div>
